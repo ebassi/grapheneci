@@ -2,6 +2,7 @@ FROM debian:stretch
 MAINTAINER Emmanuele Bassi <ebassi@gmail.com>
 
 RUN apt-get update -qq && apt-get install -qq -y \
+        clang \
         gcc \
         gobject-introspection \
         gir1.2-glib-2.0 \
