@@ -1,7 +1,7 @@
 FROM debian:stretch-slim
 MAINTAINER Emmanuele Bassi <ebassi@gmail.com>
 
-RUN apt-get update -qq && apt-get install -qq -y \
+RUN apt-get update -qq && apt-get install --no-install-recommends -qq -y \
         clang \
         gcc \
         gobject-introspection \
@@ -12,7 +12,10 @@ RUN apt-get update -qq && apt-get install -qq -y \
         ninja-build \
         pkg-config \
         python3 \
-        python3-pip
+        python3-pip \
+        python3-setuptools
+
+RUN rm -rf /usr/share/doc/* /usr/share/man/*
 
 RUN locale-gen C.UTF-8 && /usr/sbin/update-locale LANG=C.UTF-8
 
