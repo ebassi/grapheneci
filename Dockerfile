@@ -6,15 +6,11 @@ RUN apt-get update -qq && apt-get install -qq -y \
         gcc \
         gobject-introspection \
         gir1.2-glib-2.0 \
-        git-core \
-        libc6-dev \
         libgirepository1.0-dev \
         libglib2.0-dev \
         locales \
-        make \
         ninja-build \
         pkg-config \
-        python \
         python3 \
         python3-pip
 
