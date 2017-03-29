@@ -1,4 +1,4 @@
-FROM debian:stretch
+FROM debian:stretch-slim
 MAINTAINER Emmanuele Bassi <ebassi@gmail.com>
 
 RUN apt-get update -qq && apt-get install -qq -y \
