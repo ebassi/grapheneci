@@ -20,9 +20,7 @@ RUN apt-get update -qq && apt-get install -qq -y \
 
 RUN locale-gen C.UTF-8 && /usr/sbin/update-locale LANG=C.UTF-8
 
-ENV LANG C.UTF-8
-ENV LANGUAGE C.UTF-8
-ENV LC_ALL C.UTF-8
+ENV LANG=C.UTF-8 LANGUAGE=C.UTF-8 LC_ALL=C.UTF-8
 
 RUN pip3 install meson
 
