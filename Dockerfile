@@ -15,6 +15,7 @@ RUN apt-get update -qq \
         python3 \
         python3-pip \
         python3-setuptools \
+        python3-wheel \
     && rm -rf /usr/share/doc/* /usr/share/man/*
 
 RUN locale-gen C.UTF-8 && /usr/sbin/update-locale LANG=C.UTF-8
